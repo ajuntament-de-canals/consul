@@ -8,11 +8,13 @@ CKEDITOR.editorConfig = function( config )
 
   config.filebrowserImageBrowseLinkUrl = "/ckeditor/pictures";
   config.filebrowserImageBrowseUrl = "/ckeditor/pictures";
-  config.filebrowserImageUploadUrl = "/ckeditor/pictures";
+  config.filebrowserImageUploadUrl = "/ckeditor/pictures?";
   config.filebrowserUploadMethod = "form";
 
   config.allowedContent = true;
   config.format_tags = "p;h2;h3";
+
+  config.removePlugins = "balloonpanel,balloontoolbar,copyformatting,scayt,wsc";
 
   // Rails CSRF token
   config.filebrowserParams = function(){
