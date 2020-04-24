@@ -3,8 +3,18 @@
 // * English: https://github.com/consul/consul/blob/master/CUSTOMIZE_EN.md#css
 // * Spanish: https://github.com/consul/consul/blob/master/CUSTOMIZE_ES.md#css
 //
-
 // Selector d'idioma a la dreta.
 header .locale {
     float: right;
 }
+
+.top-links {
+    background: #4c4c4c;
+}
+
+
+/*
+.footer {
+    background: #4c4c4c;
+    color: #ffffff;
+}*/
