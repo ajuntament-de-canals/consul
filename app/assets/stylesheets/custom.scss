@@ -4,17 +4,62 @@
 // * Spanish: https://github.com/consul/consul/blob/master/CUSTOMIZE_ES.md#css
 //
 // Selector d'idioma a la dreta.
+header {
+    background: #ffffff;
+}
+
 header .locale {
     float: right;
 }
 
 .top-links {
-    background: #4c4c4c;
+    background: #2a2a2a;
 }
 
+.top-bar {
+    background: #ffffff !important;
+}
 
-/*
-.footer {
-    background: #4c4c4c;
+.top-bar-title {
+    max-height: 169px;
+}
+
+.top-bar .top-bar-title a img {
+    margin: 0;
+    width: auto;
+    max-height: 139px;
+    margin: 15px;
+}
+
+.subnavigation a {
+    color: #af1d2f;
+}
+
+.subnavigation a:hover {
+    color: #2a2a2a;
+}
+
+.top-bar .menu>li a {
+    color: #af1d2f;
+}
+
+.top-bar .menu>li .button {
+    background: #af1d2f;
     color: #ffffff;
-}*/
+    text-align: center;
+}
+
+footer {
+    color: #ffffff;
+}
+
+.footer {
+    background: #2a2a2a;
+}
+
+footer a,
+footer a:hover,
+footer a:active:hover,
+footer a:focus:hover {
+    color: #ffffff;
+}
