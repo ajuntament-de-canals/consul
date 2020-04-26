@@ -1,0 +1,82 @@
+<header>
+  <% if display_remote_translation_info?(@remote_translations, I18n.locale) %>
+    <%= render "shared/remote_translations_button", remote_translations: @remote_translations %>
+  <% end %>
+
+  <div class="top-links">
+    <div class="row">
+      <%= render "shared/locale_switcher" %>
+      <div class="hide-for-small-only">
+        <%= render "shared/top_links" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="top-bar">
+
+      <span data-responsive-toggle="responsive-menu" data-hide-for="medium" class="float-right">
+        <span class="menu-icon dark" data-toggle></span>
+        <%= t("application.menu") %>
+      </span>
+
+      <div class="top-bar-title">
+        <%= link_to root_path, accesskey: "0" do %>
+          <%= image_tag(image_path_for("logo_header.png"), class: "float-left", alt: t("layouts.header.logo")) %>
+        <% end %>
+      </div>
+
+      <div id="responsive-menu">
+        <div class="top-bar-right">
+          <ul class="menu" data-responsive-menu="medium-dropdown">
+            <%= render "shared/admin_login_items" %>
+            <%= render "layouts/notification_item" %>
+            <%= render "devise/menu/login_items" %>
+          </ul>
+
+          <div class="show-for-small-only">
+            <div class="subnavigation row">
+              <%= render "shared/subnavigation" %>
+              <div class="small-12 column">
+                <%= render "shared/top_links" %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="navigation_bar" class="subnavigation expanded">
+    <div class="row">
+      <div class="hide-for-small-only">
+        <%= render "shared/subnavigation" %>
+      </div>
+      <div class="small-12 medium-3 column">
+        <%= yield :header_addon %>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<div class="row passos">
+                <div class="small-12 medium-4 column">                  
+                    <%= image_tag(image_path_for("img_proposem.png"), class: "float-left", alt: t("layouts.header.logo")) %>
+                    <span></span>
+                    <h1 class="capPassos">PROPOSEM</h1>
+                    <p class="">Les veïnes i veïns presentem propostes per al nostre poble.</p>
+                </div>
+                <div class="small-12 medium-4 column">
+                    <%= image_tag(image_path_for("img_decidim.png"), class: "float-left", alt: t("layouts.header.logo")) %>
+                    <span></span>
+                    <h1 style="color: #af1d2f;" class="capPassos">DECIDIM</h1>
+                    <p class="">Els serveis tècnics de l'ajuntament avaluen i estudien la viabiliat tècnica, jurídica i pressupostària d'eixes propostes.</p>
+                </div>
+                <div class="small-12 medium-4 column">                  
+                    <%= image_tag(image_path_for("img_votem.png"), class: "float-left", alt: t("layouts.header.logo")) %>
+                    <span></span>
+                    <h1 style="color: #af1d2f;" class="capPassos">VOTEM</h1>
+                    <p class="">Les propostes més interessants passaran a votació de la ciudadania i les més votades es duran a terme el mes aviat possible.</p>
+                </div>
+            </div>
